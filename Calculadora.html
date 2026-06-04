@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="calculadora-page">
+    <header class="header">
+        <h1 class="logo">Calculadora</h1>
+        <ul class="menu">
+            <li><a href="index.html">inicio</a></li>
+            <li><a href="Calculadora.html">Calculadora</a></li>
+            <li><a href="EdadActual.html">Calculadora de Edad</a></li>
+        </ul>
+    </header>
+
+    <main class="calculadora-container">
+        <div class="calculator">
+            <div class="display" id="display">0</div>
+            
+            <div class="buttons-grid">
+                <!-- Fila 1 -->
+                <button class="btn btn-function" onclick="clearDisplay()">C</button>
+                <button class="btn btn-function" onclick="deleteLast()">←</button>
+                <button class="btn btn-operation" onclick="appendOperation('/')" title="División">÷</button>
+                <button class="btn btn-operation" onclick="appendOperation('*')" title="Multiplicación">×</button>
+
+                <!-- Fila 2 -->
+                <button class="btn" onclick="appendNumber('7')">7</button>
+                <button class="btn" onclick="appendNumber('8')">8</button>
+                <button class="btn" onclick="appendNumber('9')">9</button>
+                <button class="btn btn-operation" onclick="appendOperation('-')">−</button>
+
+                <!-- Fila 3 -->
+                <button class="btn" onclick="appendNumber('4')">4</button>
+                <button class="btn" onclick="appendNumber('5')">5</button>
+                <button class="btn" onclick="appendNumber('6')">6</button>
+                <button class="btn btn-operation" onclick="appendOperation('+')">+</button>
+
+                <!-- Fila 4 -->
+                <button class="btn" onclick="appendNumber('1')">1</button>
+                <button class="btn" onclick="appendNumber('2')">2</button>
+                <button class="btn" onclick="appendNumber('3')">3</button>
+                <button class="btn btn-operation" onclick="calculatePower()" title="Potencia">x^y</button>
+
+                <!-- Fila 5 -->
+                <button class="btn btn-zero" onclick="appendNumber('0')">0</button>
+                <button class="btn" onclick="appendNumber('.')">.</button>
+                <button class="btn btn-operation" onclick="calculateFactorial()" title="Factorial">!</button>
+                <button class="btn btn-equals" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+<footer class="footer">
+    <p>&copy; Roger Garcia Chang - Todos los derechos reservados.</p>
+</footer>
+</html>
